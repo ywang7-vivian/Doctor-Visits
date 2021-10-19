@@ -1,17 +1,3 @@
-**Mid-Term Exam 2**
-
-Case: Doctor&#39;s Visits
-
-Yifan Wang
-
-QTM 2623
-
-Professor Mathaisel
-
-I pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work.
-
-Initials: YW
-
 ## 1. Introduction
 
 This report analyzes the dataset, DoctorAUS.csv, which refers to the demographical and health related information of individuals in Australia. The dataset is originally sourced from Cameron, A.C. and P.K. Trivedi (1986) &quot;Econometric Models Based on Count Data: Comparisons and Applications of Some Estimators and Tests&quot;, _Journal of Applied Econometrics_, 1, 29-54. The goal of this analysis is to describe the characteristics of people with different insurance and the relationship between health data and demographic data, including the relationship between age and health score, age and number of illness, gender and medications, gender and chronic conditions, etc.
@@ -28,15 +14,15 @@ The first step is to load data into R studio using the function read.csv as show
 
 Exhibit 1
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit1.png)
+![](images/exhibit1.png)
 
 Exhibit 2
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit2.png)
+![](images/exhibit2.png)
 
 Exhibit 3
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit3.png)
+![](images/exhibit3.png)
 
 #### 2.1.2 Modifying Data Types
 
@@ -44,7 +30,7 @@ Observing the data, I noticed that &quot;X&quot; column is only an index column 
 
 Exhibit 4
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit4.png)
+![](images/exhibit4.png)
 
 Table 1
 
@@ -72,7 +58,7 @@ The function anyNA() and summary() are used to get an overview of the dataset, a
 
 Exhibit 5
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit5.png)
+![](images/exhibit5.png)
 
 ### 2.2 Selection of Insurance Based on Age and Income
 
@@ -80,7 +66,7 @@ Before digging into the dataset, I first wanted to see the number of observation
 
 Exhibit 6
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit6.png)
+![](images/exhibit6.png)
 
 As shown in Exhibit 7, there are 12 bar plots in total, three income levels by four insurance types. We can see that government insurance are mostly owned by low to middle income people, with freepor owned more by young people and freerepa owned more by elder people. This makes sense because freerepa is the government insurance due to old age disability or veteran status, while freepor is the government insurance due to low income. The other two paid insurances are owned more by middle to high income people, and a lot of them are below the age of 40.
 
@@ -88,7 +74,7 @@ We can also have a sense that there are relatively smaller amounts of observatio
 
 Exhibit 7
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit7.png)
+![](images/exhibit7.png)
 
 ### 2.3 Health Score and Number of Illness in past 2 weeks by Insurance
 
@@ -96,7 +82,7 @@ In order to explore the health situation of people in each insurance, I plotted 
 
 Exhibit 8
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit8.png)
+![](images/exhibit8.png)
 
 As shown in Exhibit 9, there are 2 sets of boxplots presented. The first set of boxplots is based on general health score. We can see that people with the two private health insurances generally have better health scores than people with government health insurance, and people with freepor insurance have the worst median health score. Besides, the general health score is strongly right skewed and has many outliers of high (bad) health score.
 
@@ -106,7 +92,7 @@ The main reason that people with freerepa insurance have a higher median illness
 
 Exhibit 9
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit9.png)
+![](images/exhibit9.png)
 
 ### 2.4 Health score and Number of medications used by Age
 
@@ -114,7 +100,7 @@ Wondering if there is a relationship between age and health score, and age and t
 
 Exhibit 10
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit10.png)
+![](images/exhibit10.png)
 
 As shown in Exhibit 11, the grey bar plot shows that general health score is relatively stable as age growths with slightly higher score in people&#39;s 30s and 50s.
 
@@ -124,7 +110,7 @@ It is interesting that as age grows, the average health score does not increase 
 
 Exhibit 11
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit11.png)
+![](images/exhibit11.png)
 
 ### 2.5 Prescribed Medications and Nonprescribed Medications used based on Insurance
 
@@ -132,7 +118,7 @@ In order to find out if there is a difference in medications taken between diffe
 
 Exhibit 12
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit12.png)
+![](images/exhibit12.png)
 
 As shown in Exhibit 13, the line chart shows that people with freerepa insurance have the highest consumption in prescribed medications and lowest consumption in nonprescribed medications. Since freerepa represents elder people with government insurance, the graph confirms my finding in Exhibit 11 that as age increases, people take more prescribed medications and slightly less nonprescribed medications.
 
@@ -140,7 +126,7 @@ We can also see that yellow bars are always higher than green bars, which shows 
 
 Exhibit 13
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit13.png)
+![](images/exhibit13.png)
 
 ### 2.6 Chronic Condition based on Gender and Insurance Contract
 
@@ -148,13 +134,13 @@ In order to see if more medications is taken because chronic condition, I used t
 
 Exhibit 14
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit14.png)
+![](images/exhibit14.png)
 
 As shown in Exhibit 15, the plot is divided into multiple rectangles with area of each rectangle representing the frequency. Blue means that the person has chronic condition and is limiting his or her activity. Pink means that the person has chronic condition, but the condition is so serious to influence activity. White means that the person has no chronic condition. From the chart, we can see that within the same insurance type, female always have more chronic condition than male, and more chronic condition is limiting their activities. In addition, people with freerepa condition have the most chronic condition, and people with freepor condition have the least chronic condition. This aligns with the fact that freerepa insurance is issued to old age disability and freepor insurance is owned most by young people.
 
 Exhibit 15
 
-![](https://github.com/ywang7-vivian/Doctor-Visits/images/exhibit15.png)
+![](images/exhibit15.png)
 
 ## 3. Conclusion
 
